@@ -1,0 +1,11 @@
+ext {
+
+    // Android
+    androidBuildToolsVersion = ""
+    androidMinSdkVersion = 22
+    androidTargetSdkVersion = 27
+    androidCompileSdkVersion = 27
+
+    // Libraries
+    suppotLibraryVersion = ''
+}
