@@ -4,7 +4,7 @@ import com.android.devmonkey.domain.executor.PostExecutionThread
 import com.android.devmonkey.domain.model.Project
 import com.android.devmonkey.domain.repository.ProjectRepository
 import com.android.devmonkey.domain.utils.ProjectDataFactory
-import com.nhaarman.mockitokotlin2.whenever
+import com.nhaarman.mockito_kotlin.whenever
 import io.reactivex.Observable
 import org.junit.After
 import org.junit.Before
@@ -48,14 +48,6 @@ class GetProjectsUseCaseTest {
 
         val testObserver = getProjectsUseCase.buildUseCase().test()
         testObserver.assertValue(projects)
-    }
-
-    @Test
-    @Throws(Exception::class)
-    fun getProjectsShouldReturnProjectsObservableList() {
-        stubGetProject(Observable.just(ProjectDataFactory.makeProjectList(2)))
-        val testObserver = getProjectsUseCase.buildUseCase().test()
-        testObserver.assertComplete()
     }
 
     private fun stubGetProject(observable: Observable<List<Project>>) {

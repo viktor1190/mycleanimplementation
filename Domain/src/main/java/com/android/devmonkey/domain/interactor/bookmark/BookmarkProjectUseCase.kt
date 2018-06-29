@@ -11,7 +11,7 @@ class BookmarkProjectUseCase @Inject constructor(
         postExecutionThread: PostExecutionThread)
     : CompletableUseCase<BookmarkProjectUseCase.Params> (postExecutionThread) {
 
-    override fun buildUseCaseCompletable(params: Params?): Completable {
+    public override fun buildUseCaseCompletable(params: Params?): Completable {
         if (params == null) throw IllegalArgumentException("Params can't be null")
         return projectRepository.bookmarkProject(params.projectId)
     }
