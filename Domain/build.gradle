@@ -10,7 +10,7 @@ dependencies {
 
     testImplementation domainTestDependencies.junit
     testImplementation domainTestDependencies.assert
-    testImplementation domainTestDependencies.mockito
+    testImplementation domainTestDependencies.mockitoKotlin
 }
 
 sourceCompatibility = "6"

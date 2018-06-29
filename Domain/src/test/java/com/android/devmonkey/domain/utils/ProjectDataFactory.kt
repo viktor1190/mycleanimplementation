@@ -3,7 +3,7 @@ package com.android.devmonkey.domain.utils
 import com.android.devmonkey.domain.model.Project
 import java.util.*
 
-class ProjectDataFactory {
+object ProjectDataFactory {
 
     fun randomUuid(): String = UUID.randomUUID().toString()
 
